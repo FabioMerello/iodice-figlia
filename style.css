@@ -650,6 +650,97 @@ body {
 }
 
 
+/*Eventi */
+.eventi-section {
+    padding: 60px 0;
+    text-align: center;
+}
+.eventi-intro {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+
+#form-eventi {
+    scroll-margin-top: 100px; /* adatta al tuo header */
+}
+
+/* Blocco evento */
+.evento-block {
+    position: relative;
+    height: 350px; /* leggermente più alto per effetto immersivo */
+    background-size: cover;
+    background-position: center;
+    margin: 0;              /* niente spazio tra i blocchi */
+    border-radius: 0;       /* niente bordi arrotondati */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.evento-block::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.45); /* overlay scuro */
+    pointer-events: none; /* ✅ non blocca più i click */
+}
+
+.evento-overlay {
+    position: relative;
+    z-index: 2; /* ✅ sopra l’overlay */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    max-width: 700px;
+    pointer-events: auto; /* ✅ bottoni cliccabili */
+}
+
+.evento-overlay h3 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.evento-overlay p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* Stile pulsanti negli eventi */
+.evento-overlay .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #800020; /* bordeaux */
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.evento-overlay .btn:hover {
+    background-color: #b8860b; /* oro scuro */
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .evento-block {
+        height: 220px;
+    }
+    .evento-overlay h3 {
+        font-size: 1.5rem;
+    }
+    .evento-overlay p {
+        font-size: 0.95rem;
+    }
+}
 
 
 
@@ -1135,4 +1226,90 @@ footer a:hover {
     .hero-tech p { font-size: 1rem; }
     .tech-wow h2 { font-size: 2rem; margin-bottom: 2rem; }
     .tech-info h3 { font-size: 1.2rem; }
+}
+
+
+
+/* Shop Section */
+.shop-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.shop-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.shop-intro {
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+}
+
+/* Grid Prodotti */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Card Prodotto */
+.product-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.product-info p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #a8741a; /* colore oro/bronzo elegante */
+    margin-bottom: 15px;
+}
+
+/* Bottone Ordina */
+.product-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #a8741a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.product-card .btn:hover {
+    background: #8b6216;
 }
