@@ -48,14 +48,24 @@
 
     <div class="shop-grid">
 
-        <!-- Card 1 -->
         <div class="product-card">
             <img src="https://cdn-3-profumeriemallardo.server.it/shop/139739-large_default/lo-elv-olio-crema-t-t-c-150.jpg" alt="Crema Idratante">
             <div class="product-info">
                 <h3>Crema Idratante</h3>
                 <p>Formato 50ml / 100ml</p>
                 <span class="price">€19,90</span>
-                <a href="mailto:info@vincenzoiodice.it?subject=Ordine Crema Idratante" class="btn">Ordina</a>
+
+                <!-- Form Web3Forms -->
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="7818f396-0617-47d4-be1b-06fcd0444542">
+                    <input type="hidden" name="to" value="beautyequipment.na@gmail.com">
+                    <input type="hidden" name="product" value="Crema Idratante">
+
+                    <!-- Redirect dopo invio -->
+                    <input type="hidden" name="redirect" value="shop.html">
+
+                    <button type="submit" class="btn">Ordina</button>
+                </form>
             </div>
         </div>
 
@@ -88,8 +98,8 @@
 <footer data-aos="fade-up">
     <p>&copy; 2025 Beauty Equipment Aesthetic – Tutti i diritti riservati</p>
     <p>
-        <a href="tel:+393516281319"> +39 351 628 1319</a> |
-        <a href="mailto:info@vincenzoiodice.it"> info@vincenzoiodice.it</a>
+        <a href="tel:+390814617449"> +39 081 461 7449</a> |
+        <a href="mailto:beautyequipment.na@gmail.com"> beautyequipment.na@gmail.com</a>
         <a href="privacy.html">Privacy Policy</a>
     </p>
 </footer>
