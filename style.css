@@ -410,6 +410,261 @@ body {
     }
 }
 
+/* ====== SEZIONE ====== */
+.showcase-section {
+    background: var(--sand);
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.section-subtitle {
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+/* ====== GRIGLIA ====== */
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* ====== CARD ====== */
+.showcase-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: fadeUp 1s forwards;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.showcase-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+/* ====== IMMAGINI ====== */
+.showcase-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10; /* proporzione armoniosa su desktop */
+}
+
+.showcase-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* riempie il box senza distorcere */
+    object-position: center top; /* puoi cambiare in 'center center' se necessario */
+    transition: transform 0.8s ease;
+}
+
+.showcase-card:hover .showcase-image img {
+    transform: scale(1.08);
+}
+
+/* ====== TESTO ====== */
+.showcase-content {
+    padding: 25px;
+}
+
+.showcase-content h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.showcase-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* ====== BOTTONE ====== */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b6b, #f06595);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #f06595, #ff6b6b);
+    transform: scale(1.05);
+}
+
+/* ====== ANIMAZIONI ====== */
+@keyframes fadeInDown {
+    0% {opacity: 0; transform: translateY(-30px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    0% {opacity: 0; transform: translateY(30px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeUp {
+    0% {opacity: 0; transform: translateY(40px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+    .showcase-image {
+        aspect-ratio: 4 / 3; /* proporzione più alta su tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .showcase-content h3 {
+        font-size: 1.3rem;
+    }
+    .showcase-content p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .showcase-image {
+        aspect-ratio: 1 / 1; /* formato quadrato su mobile */
+    }
+}
+
+
+
+.elettromed-section {
+    background: var(--sand);
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+.elettromed-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* ===== IMMAGINE ===== */
+.elettromed-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.elettromed-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* ===== CONTENUTO ===== */
+.elettromed-content {
+    text-align: left;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.elettromed-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.elettromed-content h3 {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    color: #d63384;
+}
+
+.elettromed-content p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.elettromed-content ul {
+    list-style: none;
+    margin: 10px 0 20px 0;
+    padding-left: 0;
+}
+
+.elettromed-content li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.elettromed-content li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* ===== ANIMAZIONI ===== */
+@keyframes fadeIn {
+    0% {opacity: 0; transform: scale(0.95);}
+    100% {opacity: 1; transform: scale(1);}
+}
+
+@keyframes fadeUp {
+    0% {opacity: 0; transform: translateY(40px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .elettromed-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .elettromed-content {
+        text-align: center;
+    }
+    .elettromed-image {
+        order: -1;
+    }
+    .elettromed-content h3 {
+        color: #ff6b6b;
+    }
+}
+
+
+
 
 .gallery-section {
     padding: 4rem 2rem;
@@ -1255,6 +1510,14 @@ footer a:hover {
     gap: 30px;
 }
 
+/* Grid Prodotti */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: start; /* ogni card cresce solo della sua altezza */
+}
+
 /* Card Prodotto */
 .product-card {
     background: #fff;
@@ -1268,14 +1531,24 @@ footer a:hover {
     transform: translateY(-8px);
 }
 
+/* Immagini responsive */
 .product-card img {
     width: 100%;
-    height: 300px;   /* altezza fissa */
-    object-fit: contain; /* non taglia, ma scala dentro il box */
-    background: #fff; /* opzionale: sfondo dietro all’immagine */
-    padding: 10px;  /* margine interno per non schiacciare */
+    height: auto;       /* altezza automatica per adattarsi */
+    max-height: 300px;  /* limite massimo */
+    object-fit: contain;
+    background: #fff;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.5s ease;
 }
 
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Info prodotto */
 .product-info {
     padding: 20px;
 }
@@ -1292,15 +1565,57 @@ footer a:hover {
     margin-bottom: 12px;
 }
 
+/* Testo completo “Leggi di più” */
+.product-full-desc {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    line-height: 1.5;
+    color: #555;
+}
+
+.product-full-desc ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 8px 0;
+}
+
+.product-full-desc li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 6px;
+}
+
+.product-full-desc li::before {
+    content: '✨';
+    position: absolute;
+    left: 0;
+    color: #ff6b6b;
+}
+
+/* Pulsante Leggi di più */
+.show-more-btn {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+}
+
+/* Prezzo */
 .price {
     display: block;
     font-size: 1.2rem;
     font-weight: 600;
-    color: #a8741a; /* colore oro/bronzo elegante */
+    color: #a8741a;
     margin-bottom: 15px;
 }
 
-/* Bottone Ordina */
+/* Bottone Ordina / Richiedi Preventivo */
 .product-card .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -1314,4 +1629,54 @@ footer a:hover {
 
 .product-card .btn:hover {
     background: #8b6216;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .product-card img {
+        max-height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-card img {
+        max-height: 220px;
+    }
+}
+
+
+.product-full-desc {
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    line-height: 1.5;
+    color: #555;
+}
+
+.product-full-desc ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 8px 0;
+}
+
+.product-full-desc li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 6px;
+}
+
+.product-full-desc li::before {
+    content: '✨';
+    position: absolute;
+    left: 0;
+    color: #ff6b6b;
+}
+
+.show-more-btn {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin: 5px 0 10px 0;
+    display: inline-block;
 }

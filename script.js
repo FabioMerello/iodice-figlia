@@ -44,6 +44,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+// LEGGI DI PIù
+    document.querySelectorAll('.show-more-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const fullDesc = btn.nextElementSibling;
+
+            if (fullDesc.style.maxHeight && fullDesc.style.maxHeight !== '0px') {
+                // Chiudi
+                fullDesc.style.maxHeight = '0';
+                fullDesc.style.opacity = 0;
+                btn.textContent = 'Leggi di più';
+            } else {
+                // Apri
+                fullDesc.style.maxHeight = fullDesc.scrollHeight + 'px';
+                fullDesc.style.opacity = 1;
+                btn.textContent = 'Chiudi';
+            }
+        });
+    });
+
+
+
     // ====== SCROLL FLUIDO (con offset per navbar) ======
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
