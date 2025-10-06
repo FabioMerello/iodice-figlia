@@ -65,6 +65,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+    // FORM PRODOTTI
+    document.querySelectorAll('.toggle-form-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const form = button.nextElementSibling;
+            form.classList.toggle('active');
+            button.textContent = form.classList.contains('active')
+                ? 'Chiudi Modulo ✖'
+                : 'Richiedi Preventivo';
+        });
+    });
+
     // ====== SCROLL FLUIDO (con offset per navbar) ======
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

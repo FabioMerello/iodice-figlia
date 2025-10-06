@@ -19,7 +19,7 @@
         <a href="index.html#hero">Home</a>
         <a href="index.html#about">Chi siamo</a>
         <a href="index.html#servizi">Servizi</a>
-        <a href="index.html#showcase">Attrezzatura</a>
+        <a href="index.html#showcase">Attrezzature</a>
         <a href="shop.html">Creme & Oli</a>
         <a href="index.html#contact">Contatti</a>
     </nav>
@@ -43,26 +43,69 @@
 <section id="shop" class="shop-section" data-aos="fade-up">
 <h2>Noleggio Macchinari Estetici</h2>
 <p class="shop-intro">
-    Scopri le nostre soluzioni di noleggio per apparecchiature estetiche professionali: tecnologie avanzate per rimodellamento, epilazione e trattamenti viso-corpo, senza investimenti iniziali.
+    Da Beauty Equipment puoi noleggiare apparecchiature estetiche professionali per il tuo centro senza alcuna preoccupazione.
+    Tutti i macchinari sono testati, certificati e pronti all’uso, con assistenza tecnica e consulenza continua incluse nel servizio di noleggio.
+    Affidati a noi per lavorare in sicurezza, qualità e tranquillità.
 </p>
 
     <div class="shop-grid">
 
-        <!-- Card 1 -->
+        <!-- Card 1 - Hydra Skin – Noleggio Professionale -->
         <div class="product-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqHObNqQxP8z20pCVdOtg_JovvVO-vQjCzCg&s" alt="BodyShape Pro">
-            <div class="product-info">
-                <h3>BodyShape Pro</h3>
-                <p>Noleggio mensile di apparecchiatura rimodellante corpo con vacuum e infrarossi.</p>
-                <span class="price">da €390/mese</span>
+            <img src="hidraskin.png" alt="Hydra Skin – Pulizia Viso Professionale a Idrogeno e Ossigeno">
 
-                <!-- Form Web3Forms -->
-                <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="product-info">
+                <h3>Hydra Skin – Noleggio Professionale</h3>
+                <p>Trattamento di ultima generazione per la pulizia, idratazione e rigenerazione del viso. Ideale per centri estetici e spa che desiderano offrire un servizio esclusivo.</p>
+
+                <!-- Bottone “Leggi di più” -->
+                <button class="show-more-btn">Leggi di più</button>
+
+                <!-- Testo aggiuntivo nascosto -->
+                <div class="product-full-desc">
+                    <p>Il sistema Hydra Skin utilizza tecnologia a idrogeno e ossigeno per una pulizia profonda e un’idratazione intensa, con risultati visibili sin dalla prima seduta.</p>
+
+                    <p><strong>✨ Funzioni principali:</strong></p>
+                    <ul>
+                        <li>Pulizia profonda con idrogeno attivo</li>
+                        <li>Esfoliazione e rimozione delicata delle impurità</li>
+                        <li>Ossigenazione e rivitalizzazione della pelle</li>
+                        <li>Stimolazione del collagene e luminosità immediata</li>
+                    </ul>
+
+                    <p><strong>🔹 Dotazioni:</strong></p>
+                    <ul>
+                        <li>Manipoli multifunzione professionali</li>
+                        <li>Display touch per gestione intuitiva</li>
+                        <li>Serbatoi separati per acqua e siero</li>
+                        <li>Programmi automatici e personalizzabili</li>
+                    </ul>
+
+                    <p><strong>💼 Opzioni di noleggio:</strong></p>
+                    <ul>
+                        <li>Noleggio settimanale o mensile</li>
+                        <li>Assistenza tecnica inclusa</li>
+                        <li>Formazione all’utilizzo compresa</li>
+                    </ul>
+                </div>
+
+                <span class="price">Noleggio da €190/mese</span>
+
+                <!-- Bottone che apre/chiude il form -->
+                <button class="toggle-form-btn" type="button">Richiedi Preventivo</button>
+
+                <!-- Form nascosto -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="product-form">
                     <input type="hidden" name="access_key" value="7818f396-0617-47d4-be1b-06fcd0444542">
                     <input type="hidden" name="to" value="beautyequipment.na@gmail.com">
-                    <input type="hidden" name="product" value="Noleggio BodyShape Pro">
+                    <input type="hidden" name="product" value="Hydra Skin – Pulizia Viso Professionale (Noleggio)">
                     <input type="hidden" name="redirect" value="shop.html">
-                    <button type="submit" class="btn">Richiedi Noleggio</button>
+
+                    <input type="text" name="name" placeholder="Il tuo nome" required>
+                    <input type="tel" name="phone" placeholder="Telefono" required pattern="[0-9+ ]{6,}">
+                    <textarea name="message" placeholder="Messaggio o richieste aggiuntive" rows="3"></textarea>
+
+                    <button type="submit" class="btn">Invia Richiesta</button>
                 </form>
             </div>
         </div>

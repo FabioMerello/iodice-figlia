@@ -19,7 +19,7 @@
         <a href="index.html#hero">Home</a>
         <a href="index.html#about">Chi siamo</a>
         <a href="index.html#servizi">Servizi</a>
-        <a href="index.html#showcase">Attrezzatura</a>
+        <a href="index.html#showcase">Attrezzature</a>
         <a href="shop.html">Creme & Oli</a>
         <a href="index.html#contact">Contatti</a>
     </nav>
@@ -47,24 +47,50 @@
     </p>
 
     <div class="shop-grid">
-<!-- Card 1 -->
+        <!-- Card - Fiale Mesoterapia e Needling -->
         <div class="product-card">
-            <img src="https://cdn-3-profumeriemallardo.server.it/shop/139739-large_default/lo-elv-olio-crema-t-t-c-150.jpg" alt="Crema Idratante">
-            <div class="product-info">
-                <h3>Crema Idratante</h3>
-                <p>Formato 50ml / 100ml</p>
-                <span class="price">€19,90</span>
+            <img src="fiale_mesoterapia.jpeg" alt="Fiale Mesoterapia e Needling">
 
-                <!-- Form Web3Forms -->
-                <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="product-info">
+                <h3>Fiale Mesoterapia e Needling</h3>
+                <p>Linea completa di componenti in fiala per mesoterapia, needling ed elettroporazione.</p>
+
+                <!-- Bottone “Leggi di più” -->
+                <button class="show-more-btn">Leggi di più</button>
+
+                <!-- Testo extra nascosto -->
+                <div class="product-full-desc">
+                    <p>
+                        Formulazioni sterili professionali ideali per trattamenti di biostimolazione e rigenerazione cellulare.
+                        Le fiale sono compatibili con tutte le tecniche di veicolazione transdermica, offrendo risultati immediati
+                        e sicuri su viso, corpo e cuoio capelluto.
+                    </p>
+                    <ul>
+                        <li>Indicata per mesoterapia, needling, elettroporazione e dermoinfusione</li>
+                        <li>Ricca di acido ialuronico, vitamine e peptidi biomimetici</li>
+                        <li>Favorisce il rinnovamento cutaneo e la luminosità</li>
+                        <li>Utilizzabile in sinergia con dispositivi estetici professionali</li>
+                    </ul>
+                </div>
+
+                <span class="price">A partire da €49,90</span>
+
+                <!-- Bottone che apre/chiude il form -->
+                <button class="toggle-form-btn" type="button">Richiedi Preventivo</button>
+
+                <!-- Form nascosto -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="product-form">
                     <input type="hidden" name="access_key" value="7818f396-0617-47d4-be1b-06fcd0444542">
                     <input type="hidden" name="to" value="beautyequipment.na@gmail.com">
-                    <input type="hidden" name="product" value="Crema Idratante">
-
-                    <!-- Redirect dopo invio -->
+                    <input type="hidden" name="product" value="Fiale Mesoterapia e Needling">
+                    <input type="hidden" name="subject" value="Richiesta Informazioni - Fiale Mesoterapia e Needling">
                     <input type="hidden" name="redirect" value="shop.html">
 
-                    <button type="submit" class="btn">Ordina</button>
+                    <input type="text" name="name" placeholder="Il tuo nome" required>
+                    <input type="tel" name="phone" placeholder="Telefono" required pattern="[0-9+ ]{6,}">
+                    <textarea name="message" placeholder="Messaggio o richieste aggiuntive" rows="3"></textarea>
+
+                    <button type="submit" class="btn">Invia Richiesta</button>
                 </form>
             </div>
         </div>
