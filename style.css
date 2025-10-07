@@ -165,6 +165,21 @@ body {
     overflow: hidden;
 }
 
+
+/* SOLO l’immagine cambia */
+.hero-home {
+    background-image: url('https://www.equipemedicinaestetica.it/wp-content/uploads/2018/12/criolipolisi-1.jpg');
+}
+
+.hero-noleggio {
+    background-image: url('https://www.equipemedicinaestetica.it/wp-content/uploads/2018/12/criolipolisi-1.jpg');
+}
+
+.hero-acquisto {
+    background-image: url('https://www.equipemedicinaestetica.it/wp-content/uploads/2018/12/criolipolisi-1.jpg');
+}
+
+
 .hero-overlay {
     position: absolute;
     inset: 0;
