@@ -44,7 +44,12 @@
 
 <div id="cookie-banner" class="hidden">
     <p>
-        Questo sito utilizza Google Maps che potrebbe installare cookie di terze parti.
+        Questo sito utilizza servizi di terze parti per contenuti interattivi e performance del sito, tra cui:
+        <strong>Google Maps</strong> per la visualizzazione delle mappe,
+        <strong>Google Fonts</strong> e la libreria <strong>AOS (Animate On Scroll)</strong> per animazioni e grafica,
+        e <strong>Google Search Console</strong> per monitorare le performance e l’indicizzazione delle pagine.
+        Google Maps potrebbe installare cookie di terze parti e raccogliere dati come l’indirizzo IP,
+        mentre Google Fonts, AOS e Search Console non tracciano direttamente gli utenti.
         <a href="/privacy.html" target="_blank" rel="noopener">Scopri di più</a>.
     </p>
     <button id="accept-cookies">OK</button>
@@ -134,7 +139,7 @@
             </p>
         </div>
         <div class="soluzione-image">
-            <img src="https://www.macchinaricentroestetico.torino.it/assets/images/forever-youngg-macchinari-estetici-foto1-2000x1300-800x520.jpg" alt="Noleggio Macchinari">
+            <img src="macchinari.webp" alt="Noleggio Macchinari">
         </div>
     </div>
 
@@ -147,7 +152,7 @@
             </p>
         </div>
         <div class="soluzione-image">
-            <img src="https://www.seleniaitalia.it/wp-content/uploads/2022/01/total-body.jpg" alt="Vendita Macchinari">
+            <img src="https://images.unsplash.com/photo-1608461111675-7bb43edcbac3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmVuZGl0YSUyMGFwcGFyZWNjaGklMjBlc3RldGljaXxlbnwwfHwwfHx8MA%3D%3D" alt="Vendita Macchinari">
         </div>
     </div>
 
@@ -175,7 +180,7 @@
             </p>
         </div>
         <div class="soluzione-image">
-            <img src="macchinari.jpeg" alt="Altri Servizi">
+            <img src="macchinari3.webp" alt="Altri Servizi">
         </div>
     </div>
 </section>
@@ -322,8 +327,10 @@
             <button type="submit">Invia richiesta</button>
         </form>
 
-        <div class="map-wrapper">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96570.15566107836!2d14.246602349999998!3d40.85393345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0866db7afaeb%3A0xd23a43cc658cb87e!2sNapoli%20NA!5e0!3m2!1sit!2sit!4v1758658099120!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-wrapper" id="map-wrapper">
+            <div class="map-placeholder">
+                <p>Accetta i cookie per visualizzare la mappa.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -332,18 +339,18 @@
     <h2>Seguici!</h2>
     <div class="social-icons">
         <a href="https://www.instagram.com/beauty_equipment_aesthetic?igsh=MTBtbG1sdm8wYjUzMw==" target="_blank" rel="noopener" aria-label="Instagram">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAABOFBMVEVHcExxF/13F/1zFf2AFv2MCu+iBOmyAuLEAd7SANraBMzwHpedI+XeANfmANHmAr+PF/6fD/vxAL7qArV7GP21FvnRVurnZ+P2Z9roQeDzGtXzB8v7AqvWiPn+7fn////7ftv/A7z0BKH3v/H+3fT+ruj+AJr/9/r/RcD/bMDKFff/Bo3iG+r8GrX/AIH+H5r/yeP+BHj/t9n/V5r+Am7+H37+BGT/ssX/Imz/RXv/ucz+e4z+JFT/XI3/MGL+LUf/u7f/yc7/Alr+OUf+MSz+QzT+R0T+iHD+SRj+VzH+WQX+AkL+c2L/0sT+aCX+cBL/7+j+aQL+eRv/oUX/fwL+iBD/wXz+jgD/3rr/1rn+dgz+nAP9FpT+lw7+qgH+tQD+vQD/w1f9kwf/xAD9PFn9ogj/ywD9uAfgLZLBAAAAaHRSTlMAW9H+////////xEsC///N////zFz/////////////////uP////7///////////7////////////////////////////////////////////////////////F/7VQ///+/87/vsj/uqL0GQwAAAHcSURBVHgBRMlFehwxEEDhV1VS04yZ7U04m+AmcBjfLLscJ4xLHyA0YGqSlJ7P9MT6BRC52EEQuDjlFITx2eWvXJsDQWYIKgJj4VQW5gBJAg75K5vTgZDTFUEu/kUEzqGaiC6DMBbhpqQyoyKTNYD1Hp+Ui6J0ZH1HhXNA0RfzyRIZl5WprroK3BZwwvx0aUGdB87HCIN5VBUVP9i468ZLxWLv+pg6vJmDaSiSW2eyIRNg84/HxfVJmTD3DxFWGmWjrosRpxMNGr3iIqYbG7IGK5lKvZE3jVuTynsDzHRoD3xpxaTQvIKumGBWgCouM9bPKEisJg0VTV4X0aBqQEuXQ2kGlmVmZCtgCoxBJfeAz0b8NQbWI7wOAKCZMgbn9E6tItG1HFTKRQ4jgSYpiiPu6BFJW1fW9J7oDFWWgpf0MH09YnB6yIEYnIJhLhqkpw3aC4OuUJ4QlDzX55/Um5m4Ue6dmXr59LwkBM0xy/ieVNV7zSSTZMU3fs8UNBomr+v3jQx5X1XmB7tdgnNu1JqDl+0nbnp+HpLp+WM5bB0mIMJFc/ouSgjd+U99O1qYONOhFEMonPcZCZ6eGp9eRcSwhWkSRCIxKnfeIMBh1WRcFOhTaENo/096OTA7AACDzKODDThakgAAAABJRU5ErkJggg==" alt="Instagram">
+            <img src="Instagram_Glyph_Gradient.png" alt="Instagram">
 
         </a>
         <a href="https://www.facebook.com/share/17CLM5Fvkx/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAgVBMVEUAAAAQcP8IZf8IZ/8JZv8HZf8IZv8IZv8IaP8JZ/8HZv8IZv8FZf8YcP9FjP+TvP/g7P/////R4/9Vlf8QYP+Es/9kn/8IZv8nef8JZf8AYP/v9f/Q4v/B2P9GjP8HZv+yz//Q4/83g/8HZv/g6/+Dsv8HZf/n7//////////e6//ZLyHjAAAAK3RSTlMAEGCfz+//XyCQj98w/////////xD//6D/kBD/////7////8///5Cgz+/vONkvXQAAAPJJREFUeAF9kkUCwzAMBGVSGMrM3P//rxBaB+e6s0YREFJpw2y0cgS1cT3DQLmNWPjcwK/XA24RWIuEdg4j7OtHUX0NYedxko5+jCeZMc0En8FsVDDHSd1WDoFdIlogX46awopozWA+ythsd7s9ZxymJBkcs3wcMZC0YHDKhDNbKLowuGYC21zINIWUbQ7EwwJT7YogqgTTKaTY4tIp7HDIRadwwzVlKVyv11HG9cekFBxam8FbTInuQ4LCd3cL2Uzd+4UV/VkHfUIgMLRdQuBi7JsCxh5rQEAfrO9NYSWojruwBOOhDoR8PF+j0fuipNX+AmbCIviMIiwCAAAAAElFTkSuQmCC" alt="Facebook">
+            <img src="Facebook_Logo_Primary.png" alt="Facebook">
         </a>
         <a href="https://www.tiktok.com/@beauty.equipment601?_t=ZN-8zyUxdqs4V1&_r=1" target="_blank" rel="noopener" aria-label="Tik Tok">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tiktok_icon.svg/1024px-Tiktok_icon.svg.png" alt="Youtube" />
+            <img src="TikTok_Icon_Black_Circle.png" alt="Youtube" />
         </a>
 
         <a href="https://whatsapp.com/channel/0029VawP78cFsn0oOKOnl62V" target="_blank" rel="noopener" aria-label="Whatsapp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Whatsapp" />
+            <img src="Digital_Glyph_White.png" alt="Whatsapp" />
         </a>
 
 
@@ -395,7 +402,7 @@
 
 
 <a href="https://wa.me/390814617449" class="whatsapp" target="_blank" rel="noopener noreferrer">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    <img src="Digital_Glyph_White.png" alt="WhatsApp" />
 </a>
 
 <!-- Footer -->
